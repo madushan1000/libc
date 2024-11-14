@@ -3694,6 +3694,7 @@ extern "C" {
     pub fn strerror_r(errnum: ::c_int, buf: *mut c_char, buflen: ::size_t) -> ::c_int;
 
     pub fn gettimeofday(tp: *mut ::timeval, tz: *mut ::timezone) -> ::c_int;
+    pub fn memfd_create(name: *const ::c_char, flags: ::c_uint) -> ::c_int;
     pub fn mlock2(addr: *const ::c_void, len: ::size_t, flags: ::c_int) -> ::c_int;
     pub fn madvise(addr: *mut ::c_void, len: ::size_t, advice: ::c_int) -> ::c_int;
     pub fn ioctl(fd: ::c_int, request: ::c_int, ...) -> ::c_int;
